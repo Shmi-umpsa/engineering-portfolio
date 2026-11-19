@@ -56,10 +56,11 @@ if (contactForm) {
 
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
+        const subject = document.getElementById("subject").value.trim();
         const message = document.getElementById("message").value.trim();
         const status = document.getElementById("form-status");
 
-        if (name === "" || email === "" || message === "") {
+        if (name === "" || email === "" || message === ""|| subject === "") {
             status.textContent = "Please fill in all fields.";
             status.style.color = "#FF6B6B";
             return;
@@ -88,3 +89,6 @@ if (contactForm) {
         status.textContent = "";
     });
 }
+/* Automatic copyright year */
+const yearSpan = document.getElementById("year");
+yearSpan.textContent = new Date().getFullYear();
